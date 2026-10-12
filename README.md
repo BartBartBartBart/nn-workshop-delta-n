@@ -1,25 +1,26 @@
 # Handwritten digit workshop
 
-Imagine a service that receives scans of handwritten digits from paper forms. Someone currently reads each digit and enters it by hand. Can a model predict the digit from its pixels, and how would we tell when its guesses are unreliable? We use MNIST's small grayscale images as a stand-in for this problem. Real forms may look different, so a good MNIST score alone would not justify deploying the model.
+**The problem**: Someone has to read handwritten digits on scanned forms and type them into a system. Handwriting varies, so writing a rule for every way people draw a digit would be difficult. Could we teach a model to recognize digits from examples instead?
 
-In [mnist_workshop.ipynb](mnist_workshop.ipynb), you will inspect examples, prepare pixels, train a small neural network, and examine its mistakes. An optional section compares it with a convolutional neural network (CNN). No GPU is required.
+In this workshop we use MNIST, a collection of small digit images with known answers, to try that approach. We inspect the images, prepare their pixel values, train a small neural network, and check which digits it gets wrong. An optional section compares it with a convolutional neural network (CNN). MNIST is practice data: real forms may look different, so a good score here would not be enough to use the model on actual forms.
 
-For the instructor, [handwritten_digit_workshop.pptx](handwritten_digit_workshop.pptx) is an editable eleven-slide presentation using the Delta-N template. The PowerPoint speaker notes and [WORKSHOP_SLIDES.md](WORKSHOP_SLIDES.md) provide talking points. Start with the handwritten-form problem, then show the development loop before the model theory and the chapter slides. Keep each notebook chapter to 10-15 minutes including its discussion stop; the optional CNN chapter takes another 10-15 minutes.
+## What's in this repository
+
+- [mnist_workshop.ipynb](mnist_workshop.ipynb) contains the code, exercises, checks, and discussion stops. Work through its chapters in order.
+
+
 
 ## What you'll learn
 
+- What the ML development cycle looks like.
 - What a model's inputs, weights, outputs, and labels represent.
 - Why training, validation, and test images have different jobs.
 - How preprocessing and model architecture affect predictions.
 - Why a single accuracy score misses useful information about errors.
 
-## Before the hands-on session
-
-The slides introduce the model, training, and the three data sets. The notebook keeps the instructions short so participants can spend more time running cells and discussing results. No prior machine learning experience is assumed; basic Python helps, and each exercise has a hint.
-
 ## Run the notebook
 
-Choose one option. Run cells from top to bottom, chapter by chapter. Pause at each "Stop and discuss" prompt before moving on. For each `TODO`, replace only the `raise NotImplementedError(...)` line. Try your own approach first; each exercise has a collapsed hint and one solution if you get stuck. The checks in the cell give immediate feedback. Copilot may suggest code, but an accepted suggestion is not an explanation: predict what the cell should do and check the output yourself.
+No prior machine learning experience is needed; basic Python helps, and each exercise has a hint. Choose one setup option below. Run cells from top to bottom, chapter by chapter, and pause at each "Stop and discuss" prompt. For each `TODO`, replace only the `raise NotImplementedError(...)` line. Try your own approach first; each exercise has a collapsed hint and one solution if you get stuck. The checks in the cell give immediate feedback. Copilot may fill in the code for you, but it is more fun to try it yourself :).
 
 ### Local in VS Code
 
