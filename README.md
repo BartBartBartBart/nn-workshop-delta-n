@@ -25,16 +25,17 @@ No prior machine learning experience is needed; basic Python helps, and each exe
 ### Local in VS Code
 
 1. Clone this repository and open the folder in VS Code. Install the Python and Jupyter extensions if VS Code prompts you.
-2. Install [uv](https://docs.astral.sh/uv/getting-started/installation/) if needed. From the repository root, create an environment and install the notebook packages:
+2. Install [uv](https://docs.astral.sh/uv/getting-started/installation/) if needed. Use it to install Python 3.11, then create a project environment and install the notebook packages from the repository root. `uv` manages this Python installation, so you do not need to install Python system-wide:
 
    ```powershell
+   uv python install 3.11
    uv venv --python 3.11 .venv
    uv pip install --python .venv\Scripts\python.exe tensorflow-cpu matplotlib ipykernel
    ```
 
-   On macOS or Linux, use `.venv/bin/python` in the second command instead.
+   On macOS or Linux, use `.venv/bin/python` in the `uv pip install` command instead.
 3. Open [mnist_workshop.ipynb](mnist_workshop.ipynb) and select the `.venv` Python kernel in the top right.
 
 ### Google Colab
 
-Open [Google Colab](https://colab.research.google.com/), choose **File > Upload notebook**, and upload [mnist_workshop.ipynb](mnist_workshop.ipynb). Use a CPU runtime. Colab includes TensorFlow, NumPy, and Matplotlib; no Colab Pro or Google Drive is needed. The first run downloads MNIST, so internet access is required.
+Open [Google Colab](https://colab.research.google.com/), choose **File > Upload notebook**, and upload [mnist_workshop.ipynb](mnist_workshop.ipynb). Use a CPU runtime. Colab provides Python, TensorFlow, NumPy, and Matplotlib; you do not need to install Python locally or use Colab Pro or Google Drive. The first run downloads MNIST, so internet access is required.
